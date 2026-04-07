@@ -25,7 +25,7 @@ import pdfplumber
 import PyPDF2
 import chromadb
 from chromadb.config import Settings as ChromaSettings
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 from core.embeddings import GeminiEmbeddings
 from config.settings import (
