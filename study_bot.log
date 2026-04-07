@@ -768,3 +768,115 @@ Traceback (most recent call last):
 telegram.error.NetworkError: httpx.ReadError: 
 2026-04-07 19:04:03,697 | INFO     | bot.handlers — User 5725578508: 'Tell me about Cambodia...'
 2026-04-07 19:04:03,700 | ERROR    | chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-04-07 21:32:44,351 | INFO     | __main__ — 🚀 Starting Study Assistant Bot...
+2026-04-07 21:32:44,713 | INFO     | __main__ — ✅ Bot is running. Press Ctrl+C to stop.
+2026-04-07 21:32:46,081 | INFO     | telegram.ext.Application — Application started
+2026-04-07 21:33:01,847 | INFO     | bot.handlers — User 5725578508: 'Please tell me about dart...'
+2026-04-07 21:33:02,139 | ERROR    | chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-04-07 21:34:21,530 | INFO     | bot.handlers — User 5725578508: 'Answer me in English...'
+2026-04-07 21:34:21,534 | ERROR    | chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-04-07 21:38:33,511 | INFO     | __main__ — 🚀 Starting Study Assistant Bot...
+2026-04-07 21:38:33,878 | INFO     | __main__ — ✅ Bot is running. Press Ctrl+C to stop.
+2026-04-07 21:38:36,263 | INFO     | telegram.ext.Application — Application started
+2026-04-07 21:38:54,641 | ERROR    | bot.handlers — Unhandled exception: Timed out
+Traceback (most recent call last):
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection.py", line 101, in handle_async_request
+    raise exc
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection.py", line 78, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection.py", line 156, in _connect
+    stream = await stream.start_tls(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_backends\anyio.py", line 67, in start_tls
+    with map_exceptions(exc_map):
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_httpxrequest.py", line 276, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_application.py", line 1335, in process_update
+    await coroutine
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_handlers\basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\01_UNIVERSITY_SOFTWARE_DEVELOPER\PROJECT\pronluytelegrambot\bot\handlers.py", line 229, in message_handler
+    await context.bot.send_chat_action(
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 2516, in send_chat_action
+    return await super().send_chat_action(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3389, in send_chat_action
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 333, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_httpxrequest.py", line 293, in do_request
+    raise TimedOut from err
+telegram.error.TimedOut: Timed out
+2026-04-07 21:41:28,335 | INFO     | __main__ — 🚀 Starting Study Assistant Bot...
+2026-04-07 21:41:28,707 | INFO     | __main__ — ✅ Bot is running. Press Ctrl+C to stop.
+2026-04-07 21:41:30,159 | INFO     | telegram.ext.Application — Application started
+2026-04-07 21:41:41,295 | INFO     | bot.handlers — User 5725578508: 'hi...'
+2026-04-07 21:41:41,446 | ERROR    | chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-04-07 21:42:10,051 | INFO     | bot.handlers — User 5725578508: 'answer in english...'
+2026-04-07 21:42:10,053 | ERROR    | chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-04-07 21:43:41,529 | INFO     | bot.handlers — User 5725578508: 'tell me about java...'
+2026-04-07 21:43:41,533 | ERROR    | chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-04-07 21:47:42,912 | INFO     | bot.handlers — User 5725578508: 'tell me about cambodia...'
+2026-04-07 21:47:42,930 | ERROR    | chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
