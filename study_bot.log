@@ -1,0 +1,770 @@
+2026-04-07 15:06:25,455 | INFO     | telegram.ext.Application � Application started
+2026-04-07 15:07:51,906 | ERROR    | chromadb.telemetry.product.posthog � Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-04-07 15:07:52,373 | ERROR    | core.gemini_client � Gemini API error for user 5725578508: 400 API key not valid. Please pass a valid API key. [reason: "API_KEY_INVALID"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "generativelanguage.googleapis.com"
+}
+, locale: "en-US"
+message: "API key not valid. Please pass a valid API key."
+]
+2026-04-07 15:07:58,520 | INFO     | bot.handlers � User 5725578508: 'hi...'
+2026-04-07 15:07:58,523 | ERROR    | chromadb.telemetry.product.posthog � Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-04-07 15:07:58,591 | ERROR    | core.gemini_client � Gemini API error for user 5725578508: 400 API key not valid. Please pass a valid API key. [reason: "API_KEY_INVALID"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "generativelanguage.googleapis.com"
+}
+, locale: "en-US"
+message: "API key not valid. Please pass a valid API key."
+]
+2026-04-07 15:12:14,483 | INFO     | bot.handlers � User 5725578508: 'hi...'
+2026-04-07 15:12:14,486 | ERROR    | chromadb.telemetry.product.posthog � Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-04-07 15:12:14,610 | ERROR    | core.gemini_client � Gemini API error for user 5725578508: 400 API key not valid. Please pass a valid API key. [reason: "API_KEY_INVALID"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "generativelanguage.googleapis.com"
+}
+, locale: "en-US"
+message: "API key not valid. Please pass a valid API key."
+]
+2026-04-07 15:13:45,995 | INFO     | telegram.ext.Application � Application is stopping. This might take a moment.
+2026-04-07 15:13:45,995 | INFO     | telegram.ext.Application � Application.stop() complete
+2026-04-07 15:14:00,019 | INFO     | telegram.ext.Application � Application started
+2026-04-07 15:14:06,452 | INFO     | bot.handlers � User 5725578508: 'hi...'
+2026-04-07 15:14:06,668 | ERROR    | chromadb.telemetry.product.posthog � Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-04-07 15:14:07,081 | ERROR    | core.gemini_client � Gemini API error for user 5725578508: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-07 15:19:08,313 | INFO     | telegram.ext.Application � Application is stopping. This might take a moment.
+2026-04-07 15:19:08,314 | INFO     | telegram.ext.Application � Application.stop() complete
+2026-04-07 15:19:24,583 | INFO     | __main__ — 🚀 Starting Study Assistant Bot...
+2026-04-07 15:19:25,013 | INFO     | __main__ — ✅ Bot is running. Press Ctrl+C to stop.
+2026-04-07 15:19:25,956 | INFO     | telegram.ext.Application — Application started
+2026-04-07 15:19:45,696 | INFO     | bot.handlers — User 5725578508: 'hi...'
+2026-04-07 15:19:45,896 | ERROR    | chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-04-07 15:19:46,227 | ERROR    | core.gemini_client — Gemini API error for user 5725578508: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-07 15:24:09,723 | INFO     | __main__ — 🚀 Starting Study Assistant Bot...
+2026-04-07 15:24:10,129 | INFO     | __main__ — ✅ Bot is running. Press Ctrl+C to stop.
+2026-04-07 15:24:11,349 | INFO     | telegram.ext.Application — Application started
+2026-04-07 15:24:18,721 | INFO     | bot.handlers — User 5725578508: 'hi...'
+2026-04-07 15:24:18,902 | ERROR    | chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-04-07 15:24:19,334 | ERROR    | core.gemini_client — Gemini API error for user 5725578508: 404 models/gemini-1.5-flash-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-07 15:25:20,681 | INFO     | bot.handlers — User 5725578508: 'hi...'
+2026-04-07 15:25:20,683 | ERROR    | chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-04-07 15:25:21,079 | ERROR    | core.gemini_client — Gemini API error for user 5725578508: 404 models/gemini-1.5-flash-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-07 15:26:45,186 | INFO     | __main__ — 🚀 Starting Study Assistant Bot...
+2026-04-07 15:26:45,595 | INFO     | __main__ — ✅ Bot is running. Press Ctrl+C to stop.
+2026-04-07 15:26:46,496 | INFO     | telegram.ext.Application — Application started
+2026-04-07 15:26:51,403 | INFO     | bot.handlers — User 5725578508: 'hi...'
+2026-04-07 15:26:51,640 | ERROR    | chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-04-07 15:26:52,233 | ERROR    | core.gemini_client — Gemini API error for user 5725578508: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-07 15:29:31,766 | INFO     | telegram.ext.Application — Application is stopping. This might take a moment.
+2026-04-07 15:29:31,766 | INFO     | telegram.ext.Application — Application.stop() complete
+2026-04-07 15:32:49,788 | INFO     | __main__ — 🚀 Starting Study Assistant Bot...
+2026-04-07 15:32:50,205 | INFO     | __main__ — ✅ Bot is running. Press Ctrl+C to stop.
+2026-04-07 15:32:51,057 | INFO     | telegram.ext.Application — Application started
+2026-04-07 15:32:59,431 | INFO     | bot.handlers — User 5725578508: 'hi...'
+2026-04-07 15:32:59,642 | ERROR    | chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-04-07 15:33:00,128 | ERROR    | core.gemini_client — Gemini API error for user 5725578508: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-pro
+Please retry in 57.764173494s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.1-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.1-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.1-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerDay-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.1-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 57
+}
+]
+2026-04-07 15:33:23,928 | INFO     | telegram.ext.Application — Application is stopping. This might take a moment.
+2026-04-07 15:33:23,928 | INFO     | telegram.ext.Application — Application.stop() complete
+2026-04-07 15:33:51,502 | INFO     | __main__ — 🚀 Starting Study Assistant Bot...
+2026-04-07 15:33:51,930 | INFO     | __main__ — ✅ Bot is running. Press Ctrl+C to stop.
+2026-04-07 15:33:52,878 | INFO     | telegram.ext.Application — Application started
+2026-04-07 15:33:56,267 | INFO     | bot.handlers — User 5725578508: 'hi...'
+2026-04-07 15:33:56,494 | ERROR    | chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-04-07 15:34:59,622 | INFO     | bot.handlers — User 5725578508: 'tell me about react...'
+2026-04-07 15:34:59,624 | ERROR    | chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-04-07 15:35:18,796 | ERROR    | bot.handlers — Unhandled exception: Can't parse entities: can't find end of the entity starting at byte offset 3919
+Traceback (most recent call last):
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_application.py", line 1335, in process_update
+    await coroutine
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_handlers\basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\01_UNIVERSITY_SOFTWARE_DEVELOPER\PROJECT\pronluytelegrambot\bot\handlers.py", line 247, in message_handler
+    await update.message.reply_text(chunk, parse_mode=ParseMode.MARKDOWN)
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_message.py", line 1762, in reply_text
+    return await self.get_bot().send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 2909, in send_message
+    return await super().send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 1029, in send_message
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 610, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 745, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 382, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Can't parse entities: can't find end of the entity starting at byte offset 3919
+2026-04-07 15:36:04,516 | INFO     | __main__ — 🚀 Starting Study Assistant Bot...
+2026-04-07 15:36:04,932 | INFO     | __main__ — ✅ Bot is running. Press Ctrl+C to stop.
+2026-04-07 15:36:06,427 | INFO     | telegram.ext.Application — Application started
+2026-04-07 15:36:16,864 | INFO     | bot.handlers — User 5725578508: 'hi...'
+2026-04-07 15:36:17,075 | ERROR    | chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-04-07 15:36:17,576 | ERROR    | core.gemini_client — Gemini API error for user 5725578508: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-pro
+Please retry in 40.406778187s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.1-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.1-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.1-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerDay-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.1-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 40
+}
+]
+2026-04-07 15:38:04,283 | INFO     | telegram.ext.Application — Application is stopping. This might take a moment.
+2026-04-07 15:38:04,283 | INFO     | telegram.ext.Application — Application.stop() complete
+2026-04-07 15:38:18,295 | INFO     | __main__ — 🚀 Starting Study Assistant Bot...
+2026-04-07 15:38:18,716 | INFO     | __main__ — ✅ Bot is running. Press Ctrl+C to stop.
+2026-04-07 15:38:20,152 | INFO     | telegram.ext.Application — Application started
+2026-04-07 15:38:35,498 | INFO     | bot.handlers — User 5725578508: 'hi...'
+2026-04-07 15:38:35,686 | ERROR    | chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-04-07 15:39:17,016 | INFO     | bot.handlers — User 5725578508: 'tell me about web development...'
+2026-04-07 15:39:17,020 | ERROR    | chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-04-07 15:39:27,330 | ERROR    | bot.handlers — Unhandled exception: Can't parse entities: can't find end of the entity starting at byte offset 2570
+Traceback (most recent call last):
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_application.py", line 1335, in process_update
+    await coroutine
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_handlers\basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\01_UNIVERSITY_SOFTWARE_DEVELOPER\PROJECT\pronluytelegrambot\bot\handlers.py", line 242, in message_handler
+    await update.message.reply_text(reply, parse_mode=ParseMode.MARKDOWN)
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_message.py", line 1762, in reply_text
+    return await self.get_bot().send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 2909, in send_message
+    return await super().send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 1029, in send_message
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 610, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 745, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 382, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Can't parse entities: can't find end of the entity starting at byte offset 2570
+2026-04-07 15:47:58,164 | INFO     | __main__ — 🚀 Starting Study Assistant Bot...
+2026-04-07 15:47:58,587 | INFO     | __main__ — ✅ Bot is running. Press Ctrl+C to stop.
+2026-04-07 15:47:59,436 | INFO     | telegram.ext.Application — Application started
+2026-04-07 15:48:07,484 | INFO     | bot.handlers — User 5725578508: 'hi...'
+2026-04-07 15:48:07,737 | ERROR    | chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-04-07 15:48:21,252 | INFO     | bot.handlers — User 5725578508: 'tell me about web development...'
+2026-04-07 15:48:21,258 | ERROR    | chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-04-07 15:50:07,823 | INFO     | bot.handlers — User 5725578508: 'tell me about mobile app...'
+2026-04-07 15:50:07,826 | ERROR    | chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-04-07 15:51:01,553 | INFO     | bot.handlers — User 5725578508: 'we can build app ios android using?...'
+2026-04-07 15:51:01,556 | ERROR    | chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-04-07 15:54:04,943 | INFO     | telegram.ext.Application — Application is stopping. This might take a moment.
+2026-04-07 15:54:04,957 | INFO     | telegram.ext.Application — Application.stop() complete
+2026-04-07 15:54:41,505 | INFO     | __main__ — 🚀 Starting Study Assistant Bot...
+2026-04-07 15:54:41,926 | INFO     | __main__ — ✅ Bot is running. Press Ctrl+C to stop.
+2026-04-07 15:54:42,960 | INFO     | telegram.ext.Application — Application started
+2026-04-07 15:54:47,594 | INFO     | core.gemini_client — Cleared history for user 5725578508
+2026-04-07 15:54:58,770 | INFO     | bot.handlers — User 5725578508: 'tell me about web development...'
+2026-04-07 15:54:58,988 | ERROR    | chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-04-07 15:59:06,591 | INFO     | bot.handlers — User 5725578508: 'សួស្ដី...'
+2026-04-07 15:59:06,595 | ERROR    | chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-04-07 16:01:11,349 | INFO     | bot.handlers — User 5725578508: 'ប្រាប់ខ្ញុំពីប្រទេសកម្ពុជា...'
+2026-04-07 16:01:11,355 | ERROR    | chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-04-07 16:01:21,239 | ERROR    | core.gemini_client — Gemini API error for user 5725578508: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 36.89096561s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 36
+}
+]
+2026-04-07 16:01:44,259 | INFO     | bot.handlers — User 5725578508: 'Tell me about Cambodia...'
+2026-04-07 16:01:44,264 | ERROR    | chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-04-07 16:01:44,582 | ERROR    | core.gemini_client — Gemini API error for user 5725578508: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 13.527040637s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 13
+}
+]
+2026-04-07 16:02:17,456 | INFO     | bot.handlers — User 5725578508: 'tell me about flutter...'
+2026-04-07 16:02:17,460 | ERROR    | chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-04-07 16:02:17,965 | ERROR    | core.gemini_client — Gemini API error for user 5725578508: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 40.169477458s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 40
+}
+]
+2026-04-07 16:05:57,479 | INFO     | core.gemini_client — Cleared history for user 5725578508
+2026-04-07 16:06:09,262 | INFO     | bot.handlers — User 5725578508: 'tell me about flutter...'
+2026-04-07 16:06:09,267 | ERROR    | chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-04-07 16:06:09,802 | ERROR    | core.gemini_client — Gemini API error for user 5725578508: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 48.35135329s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 48
+}
+]
+2026-04-07 16:06:40,005 | INFO     | telegram.ext.Application — Application is stopping. This might take a moment.
+2026-04-07 16:06:40,005 | INFO     | telegram.ext.Application — Application.stop() complete
+2026-04-07 16:13:18,361 | INFO     | __main__ — 🚀 Starting Study Assistant Bot...
+2026-04-07 16:13:18,781 | INFO     | __main__ — ✅ Bot is running. Press Ctrl+C to stop.
+2026-04-07 16:13:19,794 | INFO     | telegram.ext.Application — Application started
+2026-04-07 16:13:30,843 | INFO     | core.gemini_client — Cleared history for user 5725578508
+2026-04-07 16:13:42,020 | INFO     | bot.handlers — User 5725578508: 'hi...'
+2026-04-07 16:13:42,215 | ERROR    | chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-04-07 16:13:42,531 | ERROR    | core.gemini_client — Gemini API error for user 5725578508: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+Please retry in 15.363045008s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 15
+}
+]
+2026-04-07 16:23:48,394 | INFO     | bot.handlers — User 5725578508: 'Hi...'
+2026-04-07 16:23:48,400 | ERROR    | chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-04-07 16:23:48,742 | ERROR    | core.gemini_client — Gemini API error for user 5725578508: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+Please retry in 9.140911088s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 9
+}
+]
+2026-04-07 16:43:24,877 | INFO     | __main__ — 🚀 Starting Study Assistant Bot...
+2026-04-07 16:43:25,325 | INFO     | __main__ — ✅ Bot is running. Press Ctrl+C to stop.
+2026-04-07 16:43:26,467 | INFO     | telegram.ext.Application — Application started
+2026-04-07 16:43:33,271 | INFO     | core.gemini_client — Cleared history for user 5725578508
+2026-04-07 16:43:37,611 | INFO     | bot.handlers — User 5725578508: 'hi...'
+2026-04-07 16:43:37,868 | ERROR    | chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-04-07 16:43:38,341 | ERROR    | core.gemini_client — Gemini API error for user 5725578508: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash
+Please retry in 19.546229439s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 19
+}
+]
+2026-04-07 16:43:57,697 | INFO     | telegram.ext.Application — Application is stopping. This might take a moment.
+2026-04-07 16:43:57,699 | INFO     | telegram.ext.Application — Application.stop() complete
+2026-04-07 16:44:14,043 | INFO     | __main__ — 🚀 Starting Study Assistant Bot...
+2026-04-07 16:44:14,470 | INFO     | __main__ — ✅ Bot is running. Press Ctrl+C to stop.
+2026-04-07 16:44:15,500 | INFO     | telegram.ext.Application — Application started
+2026-04-07 16:44:22,053 | INFO     | bot.handlers — User 5725578508: 'hi...'
+2026-04-07 16:44:22,248 | ERROR    | chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-04-07 16:44:23,385 | ERROR    | core.gemini_client — Gemini API error for user 5725578508: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 34.835778854s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 34
+}
+]
+2026-04-07 17:12:11,928 | INFO     | __main__ — 🚀 Starting Study Assistant Bot...
+2026-04-07 17:12:12,298 | INFO     | __main__ — ✅ Bot is running. Press Ctrl+C to stop.
+2026-04-07 17:12:13,341 | INFO     | telegram.ext.Application — Application started
+2026-04-07 17:12:25,071 | INFO     | bot.handlers — User 5725578508: 'hi...'
+2026-04-07 17:12:25,308 | ERROR    | chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-04-07 17:12:25,709 | ERROR    | core.gemini_client — Groq API error for user 5725578508: Error code: 400 - {'error': {'message': 'The model `llama3-70b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
+2026-04-07 17:16:33,768 | INFO     | telegram.ext.Application — Application is stopping. This might take a moment.
+2026-04-07 17:16:33,769 | INFO     | telegram.ext.Application — Application.stop() complete
+2026-04-07 17:16:55,603 | INFO     | __main__ — 🚀 Starting Study Assistant Bot...
+2026-04-07 17:16:56,001 | INFO     | __main__ — ✅ Bot is running. Press Ctrl+C to stop.
+2026-04-07 17:16:57,097 | INFO     | telegram.ext.Application — Application started
+2026-04-07 17:17:04,063 | INFO     | core.gemini_client — Cleared history for user 5725578508
+2026-04-07 17:17:13,967 | INFO     | bot.handlers — User 5725578508: 'hi...'
+2026-04-07 17:17:14,183 | ERROR    | chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-04-07 17:20:21,871 | INFO     | bot.handlers — User 5725578508: 'how many massage you respone me with free limit?...'
+2026-04-07 17:20:21,877 | ERROR    | chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-04-07 17:29:54,408 | INFO     | bot.handlers — User 5725578508: 'Give me a example of setstate in flutter...'
+2026-04-07 17:29:54,412 | ERROR    | chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-04-07 17:56:43,940 | INFO     | __main__ — 🚀 Starting Study Assistant Bot...
+2026-04-07 17:56:44,380 | INFO     | __main__ — ✅ Bot is running. Press Ctrl+C to stop.
+2026-04-07 18:17:11,356 | INFO     | __main__ — 🚀 Starting Study Assistant Bot...
+2026-04-07 18:17:11,759 | INFO     | __main__ — ✅ Bot is running. Press Ctrl+C to stop.
+2026-04-07 18:17:14,306 | INFO     | telegram.ext.Application — Application started
+2026-04-07 18:18:00,576 | INFO     | bot.handlers — User 5725578508: 'what is dart? and give me example of dart...'
+2026-04-07 18:18:00,872 | ERROR    | chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-04-07 18:19:25,987 | INFO     | bot.handlers — User 5725578508: 'what is flutter? give me example of flutter...'
+2026-04-07 18:19:25,992 | ERROR    | chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-04-07 18:22:37,670 | INFO     | bot.handlers — User 5725578508: 'What is digital image processing?...'
+2026-04-07 18:22:37,674 | ERROR    | chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-04-07 18:57:39,876 | INFO     | bot.handlers — User 5725578508: 'Tip to learn it...'
+2026-04-07 18:57:39,897 | ERROR    | chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-04-07 18:58:40,958 | ERROR    | bot.handlers — Unhandled exception: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+Traceback (most recent call last):
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 4366, in get_updates
+    await self._post(
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-07 18:58:59,385 | INFO     | bot.handlers — User 5725578508: 'What is dart...'
+2026-04-07 18:58:59,390 | ERROR    | chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-04-07 19:01:01,399 | INFO     | bot.handlers — User 5725578508: 'Give me example of flutter...'
+2026-04-07 19:01:01,402 | ERROR    | chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-04-07 19:03:05,324 | ERROR    | bot.handlers — Unhandled exception: httpx.ReadError: 
+Traceback (most recent call last):
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\http11.py", line 136, in handle_async_request
+    raise exc
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_backends\anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_httpxrequest.py", line 276, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 4366, in get_updates
+    await self._post(
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 333, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_httpxrequest.py", line 300, in do_request
+    raise NetworkError(f"httpx.{err.__class__.__name__}: {err}") from err
+telegram.error.NetworkError: httpx.ReadError: 
+2026-04-07 19:04:03,697 | INFO     | bot.handlers — User 5725578508: 'Tell me about Cambodia...'
+2026-04-07 19:04:03,700 | ERROR    | chromadb.telemetry.product.posthog — Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
