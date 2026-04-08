@@ -1,76 +1,56 @@
 # bot/handlers.py
 # ─────────────────────────────────────────────────────────────────────────────
-# All Telegram Update handlers. Each handler corresponds to one user action:
-#   /start        → welcome message
-#   /help         → command reference
-#   /clear        → wipe conversation memory
-#   /schedule     → show the student's timetable
-#   /docs         → list memorised PDFs
-#   PDF upload    → trigger RAG ingestion pipeline
-#   Text message  → route to Gemini chat (with RAG if docs exist)
+# All Telegram Update handlers.
 # ─────────────────────────────────────────────────────────────────────────────
 
 import os
+import io
 import logging
-import asyncio
-import tempfile
+import PyPDF2
 
-import aiofiles
-from telegram import Update, Document
+from telegram import Update
 from telegram.ext import ContextTypes
 from telegram.constants import ParseMode, ChatAction
 
 from core.gemini_client import chat, clear_history
-from core.rag_pipeline import ingest_pdf, list_ingested_documents
+from core.rag_pipeline import list_ingested_documents
 
 logger = logging.getLogger(__name__)
 
-
 # ── /start ────────────────────────────────────────────────────────────────────
 async def start_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    """Send a rich welcome message explaining the bot's capabilities."""
     user_name = update.effective_user.first_name or "there"
     welcome_text = (
-        f"👋 Hey {user_name}! I'm your personal **Study Assistant & Coding Tutor**.\n\n"
-        "Here's what I can do:\n\n"
-        "📚 **Study Q&A** — Ask me anything about your courses\n"
-        "💻 **Code Help** — Explain, debug, or write code with you\n"
-        "📄 **PDF Memory** — Send me a PDF and I'll memorise it for future Q&A\n"
-        "🗓 **Schedule Aware** — I know your university timetable\n\n"
+        f"👋 សួស្ដី {user_name}! ខ្ញុំជា **Study Assistant & Coding Tutor** របស់អ្នក។\n\n"
+        "អ្វីដែលខ្ញុំអាចជួយបាន:\n\n"
+        "📚 **Study Q&A** — សួរខ្ញុំពីមេរៀននានា\n"
+        "💻 **Code Help** — ពន្យល់ និងសរសេរកូដ (Java, Python, Flutter)\n"
+        "📄 **File Reader** — ផ្ញើ File (PDF, TXT, កូដ) ឬរូបភាពមក ខ្ញុំអាចអានបាន\n"
+        "🗓 **Schedule Aware** — ខ្ញុំចងចាំកាលវិភាគរៀនរបស់អ្នក\n\n"
         "**Commands:**\n"
-        "/help — Show all commands\n"
-        "/schedule — View your timetable\n"
-        "/docs — List memorised documents\n"
-        "/clear — Reset our conversation\n\n"
-        "Just send me a message or drop a PDF to get started! 🚀"
+        "/help — មើលបញ្ជាផ្សេងៗ\n"
+        "/clear — លុបការចងចាំចោល (Restart Chat)\n\n"
+        "ផ្ញើសារ ឬទម្លាក់ File មកដើម្បីចាប់ផ្ដើម! 🚀"
     )
     await update.message.reply_text(welcome_text, parse_mode=ParseMode.MARKDOWN)
-
 
 # ── /help ─────────────────────────────────────────────────────────────────────
 async def help_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     help_text = (
         "🤖 **Study Assistant — Command Reference**\n\n"
-        "/start — Welcome message & overview\n"
-        "/help — This help message\n"
-        "/schedule — Display your university timetable\n"
-        "/docs — Show all PDFs I've memorised\n"
-        "/clear — Wipe conversation memory (fresh start)\n\n"
-        "**How to use PDF RAG:**\n"
-        "1️⃣ Send any PDF file in this chat\n"
-        "2️⃣ Wait for the ✅ confirmation\n"
-        "3️⃣ Ask questions — I'll answer from the document!\n\n"
-        "**Tips:**\n"
-        "• Be specific in your questions for better answers\n"
-        "• I remember our last 10 exchanges per session\n"
-        "• Re-uploading a PDF refreshes its content in memory"
+        "/start — ស្វាគមន៍\n"
+        "/help — ជំនួយ\n"
+        "/schedule — មើលកាលវិភាគរៀន\n"
+        "/clear — លុបប្រវត្តិជជែក (Fresh start)\n\n"
+        "**របៀបឱ្យខ្ញុំអាន File:**\n"
+        "1️⃣ Forward ឬ ផ្ញើ File/រូបភាពចូលទីនេះ\n"
+        "2️⃣ រង់ចាំខ្ញុំអាន (In-Memory) មួយភ្លែត\n"
+        "3️⃣ សួរសំណួរទាក់ទងនឹង File នោះបានតែម្ដង!\n"
     )
     await update.message.reply_text(help_text, parse_mode=ParseMode.MARKDOWN)
 
-
 # ── /schedule ─────────────────────────────────────────────────────────────────
 async def schedule_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    """Display the hardcoded timetable in a readable format."""
     schedule_text = (
         "🗓 **Your University Schedule**\n\n"
         "```\n"
@@ -83,149 +63,109 @@ async def schedule_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -
         "THU  13:00-15:00  Database Systems\n"
         "FRI  09:00-11:00  Software Engineering Principles\n"
         "```\n\n"
-        "💡 I keep this schedule in mind when helping you study!"
+        "💡 ខ្ញុំចាំកាលវិភាគនេះជានិច្ច!"
     )
     await update.message.reply_text(schedule_text, parse_mode=ParseMode.MARKDOWN)
 
-
 # ── /docs ─────────────────────────────────────────────────────────────────────
 async def docs_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    """List all documents currently stored in ChromaDB."""
     docs = list_ingested_documents()
     if not docs:
-        await update.message.reply_text(
-            "📭 No documents memorised yet.\n\n"
-            "Send me a PDF file and I'll ingest it into my knowledge base!"
-        )
+        await update.message.reply_text("📭 មិនមានឯកសារចាស់ៗក្នុង Database ទេ។")
     else:
         doc_list = "\n".join(f"  • {doc}" for doc in docs)
         await update.message.reply_text(
-            f"📚 **Memorised Documents ({len(docs)} total):**\n\n{doc_list}\n\n"
-            "Ask me anything about these materials!",
+            f"📚 **ឯកសារក្នុង Database ({len(docs)}):**\n\n{doc_list}\n",
             parse_mode=ParseMode.MARKDOWN,
         )
-
 
 # ── /clear ────────────────────────────────────────────────────────────────────
 async def clear_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    """Clear conversation history for this user."""
     user_id = update.effective_user.id
     clear_history(user_id)
-    await update.message.reply_text(
-        "🧹 Conversation memory cleared!\n\n"
-        "I've forgotten our chat history but still remember all your uploaded PDFs. "
-        "What would you like to study?"
-    )
+    # លុបឯកសារ In-Memory ចោលដែរ
+    if 'current_document' in context.user_data:
+        del context.user_data['current_document']
+        del context.user_data['doc_name']
+        
+    await update.message.reply_text("🧹 ខ្ញុំបានលុបការចងចាំ និង File លើអាកាសចោលអស់ហើយ!")
 
-
-# ── PDF Upload Handler ────────────────────────────────────────────────────────
-async def document_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+# ── Universal File Handler (In-Memory Processing) ─────────────────────────────
+async def handle_any_file(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """
-    Handle PDF file uploads from the user.
-
-    Flow:
-      1. Validate the file is a PDF.
-      2. Send a "processing" status message to the user.
-      3. Download the file from Telegram's servers to a temp directory.
-      4. Run the RAG ingestion pipeline (extract → chunk → embed → store).
-      5. Clean up the temp file.
-      6. Report success or failure back to the user.
+    Handle ALL files & photos. Read them in-memory without saving to hard disk.
     """
-    doc: Document = update.message.document
-
-    # Step 1: Validate file type
-    if doc.mime_type != "application/pdf":
-        await update.message.reply_text(
-            "⚠️ I can only process **PDF** files.\n"
-            "Please convert your document to PDF and send it again.",
-            parse_mode=ParseMode.MARKDOWN,
-        )
+    loading_msg = await update.message.reply_text("⏳ កំពុងវិភាគ File/រូបភាព លើអាកាស...")
+    
+    # Check if it's a document or a photo
+    attachment = update.message.document or (update.message.photo[-1] if update.message.photo else None)
+    
+    if not attachment:
+        await loading_msg.edit_text("❌ រកមិនឃើញ File ទេ។")
         return
 
-    file_name = doc.file_name or f"document_{doc.file_id}.pdf"
-    # Sanitise the filename for use as a ChromaDB source identifier
-    source_name = os.path.splitext(file_name)[0].replace(" ", "_")
+    # Extract name and extension
+    file_name = getattr(attachment, 'file_name', 'image.jpg')
+    file_extension = file_name.split('.')[-1].lower()
 
-    # Step 2: Acknowledge receipt
-    status_msg = await update.message.reply_text(
-        f"📥 Received **{file_name}**\n\n"
-        "⏳ Processing... I'm reading and memorising this document. "
-        "This may take 30-60 seconds depending on file size.",
-        parse_mode=ParseMode.MARKDOWN,
-    )
-
-    # Show "typing" action while we work
-    await context.bot.send_chat_action(
-        chat_id=update.effective_chat.id,
-        action=ChatAction.TYPING,
-    )
-
-    # Step 3: Download from Telegram to a temporary file
-    tmp_path = None
     try:
-        # Create a named temp file that persists until we explicitly delete it
-        with tempfile.NamedTemporaryFile(suffix=".pdf", delete=False) as tmp:
-            tmp_path = tmp.name
-
-        telegram_file = await context.bot.get_file(doc.file_id)
-        await telegram_file.download_to_drive(custom_path=tmp_path)
-        logger.info(f"Downloaded '{file_name}' to {tmp_path}")
-
-        # Step 4: Run ingestion pipeline (blocking — run in thread to avoid
-        # blocking the asyncio event loop during embedding API calls)
-        chunk_count = await asyncio.get_event_loop().run_in_executor(
-            None, ingest_pdf, tmp_path, source_name
+        # Show "typing" action
+        await context.bot.send_chat_action(
+            chat_id=update.effective_chat.id,
+            action=ChatAction.TYPING,
         )
 
-        # Step 5: Success feedback
-        await status_msg.edit_text(
-            f"✅ **{file_name}** memorised!\n\n"
-            f"📊 Processed into **{chunk_count} searchable chunks**.\n\n"
-            "You can now ask me questions about this document and I'll answer "
-            "directly from its content. Try it!",
-            parse_mode=ParseMode.MARKDOWN,
-        )
-        logger.info(f"Successfully ingested '{source_name}' ({chunk_count} chunks)")
+        # Download to Memory (RAM)
+        telegram_file = await context.bot.get_file(attachment.file_id)
+        file_bytes = await telegram_file.download_as_bytearray()
+        file_stream = io.BytesIO(file_bytes)
+        
+        extracted_text = ""
 
-    except ValueError as ve:
-        # PDF text extraction failed (e.g. scanned image PDF)
-        logger.error(f"Ingestion ValueError for '{file_name}': {ve}")
-        await status_msg.edit_text(
-            f"❌ **Could not read '{file_name}'**\n\n"
-            f"Reason: {str(ve)}\n\n"
-            "This usually happens with scanned/image-only PDFs. "
-            "Try a text-based PDF instead.",
-            parse_mode=ParseMode.MARKDOWN,
+        # 1. Handle PDF
+        if file_extension == 'pdf':
+            reader = PyPDF2.PdfReader(file_stream)
+            for page in reader.pages:
+                text = page.extract_text()
+                if text: 
+                    extracted_text += text + "\n"
+
+        # 2. Handle Text-based files
+        elif file_extension in ['txt', 'csv', 'json', 'py', 'dart', 'html', 'md', 'sql']:
+            extracted_text = file_bytes.decode('utf-8')
+            
+        # 3. Handle Images (Placeholder for future OCR)
+        elif file_extension in ['jpg', 'jpeg', 'png']:
+            extracted_text = "[ប្រព័ន្ធ OCR ចាប់អក្សរពីរូបភាព កំពុងស្ថិតក្នុងការអភិវឌ្ឍ។ ខ្ញុំឃើញថាវាជារូបភាព ប៉ុន្តែមិនទាន់អាចអានអក្សរលើវាបានទេឥឡូវនេះ។]"
+            
+        else:
+            await loading_msg.edit_text(f"❌ បច្ចុប្បន្នខ្ញុំមិនទាន់គាំទ្រ File ប្រភេទ (.{file_extension}) ទេ។")
+            return
+
+        # Save to User's temporary context
+        context.user_data['current_document'] = extracted_text
+        context.user_data['doc_name'] = file_name
+
+        await loading_msg.edit_text(
+            f"✅ អាន File **{file_name}** ជោគជ័យ! (ទំហំអត្ថបទ: {len(extracted_text)} តួអក្សរ)\n\n"
+            f"ឥឡូវប្អូនអាចសួរខ្ញុំពីទិន្នន័យនៅក្នុង File នេះបានហើយ។\n"
+            f"*(បញ្ជាក់៖ File នេះស្ថិតនៅលើអាកាស បើផ្ញើ File ថ្មីមក វានឹងលុបអាលុបចាស់ចោល)*",
+            parse_mode=ParseMode.MARKDOWN
         )
+        logger.info(f"In-Memory loaded '{file_name}' for user {update.effective_user.id}")
+
     except Exception as e:
-        logger.error(f"Unexpected error ingesting '{file_name}': {e}", exc_info=True)
-        await status_msg.edit_text(
-            f"❌ An unexpected error occurred while processing **{file_name}**.\n"
-            "Please try again or contact support.",
-            parse_mode=ParseMode.MARKDOWN,
-        )
-    finally:
-        # Step 6: Always clean up the temp file
-        if tmp_path and os.path.exists(tmp_path):
-            os.unlink(tmp_path)
-            logger.info(f"Cleaned up temp file: {tmp_path}")
-
+        logger.error(f"Error reading file '{file_name}': {e}", exc_info=True)
+        await loading_msg.edit_text(f"❌ មានបញ្ហាក្នុងការអាន File:\n{e}")
 
 # ── Text Message Handler ──────────────────────────────────────────────────────
 async def message_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    """
-    Handle all regular text messages — the main chat interface.
-
-    Sends a "typing" action, calls Gemini (with automatic RAG lookup),
-    and returns the formatted response.
-    """
     user_id = update.effective_user.id
     user_message = update.message.text.strip()
 
     if not user_message:
         return
 
-    # Show typing indicator while waiting for Gemini
     await context.bot.send_chat_action(
         chat_id=update.effective_chat.id,
         action=ChatAction.TYPING,
@@ -233,20 +173,24 @@ async def message_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
 
     logger.info(f"User {user_id}: '{user_message[:80]}...'")
 
-    # Get AI response (RAG is automatically triggered inside chat() if relevant)
-    reply = await chat(user_id, user_message)
+    # Combine user message with In-Memory Document if it exists
+    final_prompt = user_message
+    if 'current_document' in context.user_data:
+        doc_text = context.user_data['current_document']
+        doc_name = context.user_data.get('doc_name', 'Document')
+        # Limit document text to ~15000 chars to avoid token limits
+        final_prompt = f"យោងតាមឯកសារ '{doc_name}':\n{doc_text[:15000]}\n\nសូមឆ្លើយសំណួរខាងក្រោមផ្អែកលើឯកសារនេះ: {user_message}"
 
-    # Send the response — use Markdown for code blocks, bold, etc.
-    # Split long messages if they exceed Telegram's 4096 char limit
-   # Send the response — with a fallback for Telegram Markdown errors
+    # Get AI response
+    reply = await chat(user_id, final_prompt)
+
+    # Send the response safely
     if len(reply) <= 4096:
         try:
             await update.message.reply_text(reply, parse_mode=ParseMode.MARKDOWN)
         except Exception:
-            # បើ Telegram អាន Markdown មិនដាច់ វាទម្លាក់មកជាអក្សរធម្មតាវិញ
             await update.message.reply_text(reply)
     else:
-        # សម្រាប់សារដែលវែងពេក
         for i in range(0, len(reply), 4000):
             chunk = reply[i:i + 4000]
             try:
@@ -256,9 +200,6 @@ async def message_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
 
 # ── Error Handler ─────────────────────────────────────────────────────────────
 async def error_handler(update: object, context: ContextTypes.DEFAULT_TYPE) -> None:
-    """Log all unhandled exceptions so they don't silently disappear."""
     logger.error(f"Unhandled exception: {context.error}", exc_info=context.error)
     if isinstance(update, Update) and update.message:
-        await update.message.reply_text(
-            "⚠️ Something went wrong on my end. Please try again!"
-        )
+        await update.message.reply_text("⚠️ សូមអភ័យទោស! មានបញ្ហាបច្ចេកទេសបន្តិចបន្តួច។")

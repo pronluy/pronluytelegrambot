@@ -21,7 +21,7 @@ from bot.handlers import (
     schedule_handler,
     docs_handler,
     clear_handler,
-    document_handler,
+    handle_any_file, # <--- នាំចូលឈ្មោះថ្មី
     message_handler,
     error_handler,
 )
@@ -35,22 +35,16 @@ logging.basicConfig(
         logging.FileHandler("study_bot.log", encoding="utf-8"), 
     ],
 )
-# Silence noisy libraries
 logging.getLogger("httpx").setLevel(logging.WARNING)
 logging.getLogger("chromadb").setLevel(logging.WARNING)
 
 logger = logging.getLogger(__name__)
 
-
 def main() -> None:
-    """Build the Application, register all handlers, and start polling."""
-
     logger.info("🚀 Starting Study Assistant Bot...")
 
-    # Ensure the data directory exists for ChromaDB
     os.makedirs(os.path.join("data", "chroma_db"), exist_ok=True)
 
-    # Build the Telegram application
     app = Application.builder().token(TELEGRAM_BOT_TOKEN).build()
 
     # ── Register Command Handlers ─────────────────────────────────────────────
@@ -61,10 +55,10 @@ def main() -> None:
     app.add_handler(CommandHandler("clear", clear_handler))
 
     # ── Register Message Handlers ─────────────────────────────────────────────
-    # PDF documents — must be registered BEFORE the generic text handler
-    app.add_handler(MessageHandler(filters.Document.PDF, document_handler))
+    # Universal handler for ANY document or photo
+    app.add_handler(MessageHandler(filters.Document.ALL | filters.PHOTO, handle_any_file))
 
-    # All regular text messages (excludes commands, which are handled above)
+    # All regular text messages
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, message_handler))
 
     # ── Global Error Handler ──────────────────────────────────────────────────
@@ -73,10 +67,9 @@ def main() -> None:
     # ── Start Polling ─────────────────────────────────────────────────────────
     logger.info("✅ Bot is running. Press Ctrl+C to stop.")
     app.run_polling(
-        allowed_updates=["message"],   # Only process message updates
-        drop_pending_updates=True,     # Ignore messages sent while bot was offline
+        allowed_updates=["message"],
+        drop_pending_updates=True,
     )
-
 
 if __name__ == "__main__":
     main()
