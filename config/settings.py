@@ -10,9 +10,10 @@ from dotenv import load_dotenv
 load_dotenv()  # Reads from .env in the project root
 
 # ── API Keys ──────────────────────────────────────────────────────────────────
-TELEGRAM_BOT_TOKEN: str = os.getenv("TELEGRAM_BOT_TOKEN", "")
-GEMINI_API_KEY: str = os.getenv("GEMINI_API_KEY", "")
-GROQ_API_KEY: str = os.getenv("GROQ_API_KEY", "") # បន្ថែមបន្ទាត់នេះ
+# — API Keys —
+TELEGRAM_BOT_TOKEN: str = os.getenv("TELEGRAM_BOT_TOKEN")
+GEMINI_API_KEY: str = os.getenv("GEMINI_API_KEY")
+GROQ_API_KEY: str = os.getenv("GROQ_API_KEY")
 
 if not TELEGRAM_BOT_TOKEN or not GEMINI_API_KEY:
     raise EnvironmentError(
@@ -23,7 +24,7 @@ if not TELEGRAM_BOT_TOKEN or not GEMINI_API_KEY:
 # ── Model Configuration ───────────────────────────────────────────────────────
 # gemini-2.5-flash is the latest model for chat
 # យើងប្រើ Llama 3 70B ដែលជា Model កំពូលនិងឆ្លាតបំផុតរបស់ Meta
-GROQ_CHAT_MODEL: str = "llama3-8b-8192"
+GROQ_CHAT_MODEL: str = "llama-3.1-8b-instant"
 
 # text-embedding-004 is Google's best free embedding model (768 dimensions)
 GEMINI_EMBEDDING_MODEL: str = "models/text-embedding-004"
