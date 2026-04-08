@@ -23,7 +23,7 @@ if not TELEGRAM_BOT_TOKEN or not GEMINI_API_KEY:
 # ── Model Configuration ───────────────────────────────────────────────────────
 # gemini-2.5-flash is the latest model for chat
 # យើងប្រើ Llama 3 70B ដែលជា Model កំពូលនិងឆ្លាតបំផុតរបស់ Meta
-GROQ_CHAT_MODEL: str = "lama3-8b-8192"
+GROQ_CHAT_MODEL: str = "llama3-8b-8192"
 
 # text-embedding-004 is Google's best free embedding model (768 dimensions)
 GEMINI_EMBEDDING_MODEL: str = "models/text-embedding-004"
